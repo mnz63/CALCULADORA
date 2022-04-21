@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="calculate.svg" class="icon" />
+    <h1>CALCULADORA</h1>
+    <div class="calculadora">
+      <div class="calculadora-display">
+        <input autofocus type="text" id="visor"class="display-input"  onkeypress="event.charCode >= 43 && event.charCode <= 57"/>
+        <div class="calculadora-div-input">
+          <div class="operadores">
+            <div onclick="insert(`+`)">+</div>
+            <div onclick="insert(`-`)">-</div>
+            <div onclick="insert(`*`)">&times;</div>
+            <div onclick="insert(`/`)">/</div>
+          </div>
+          <div class="numbers">
+            <div onclick="insert('7')">7</div>
+            <div onclick="insert('8')">8</div>
+            <div onclick="insert('9')">9</div>
+          </div>
+          <div class="numbers">
+            <div onclick="insert('4')">4</div>
+            <div onclick="insert('5')">5</div>
+            <div onclick="insert('6')">6</div>
+          </div>
+          <div class="numbers">
+            <div onclick="insert('1')">1</div>
+            <div onclick="insert('2')">2</div>
+            <div onclick="insert('3')">3</div>
+          </div>
+          <div div class="numbers">
+            <div onclick="insert('0')">0</div>
+            <div onclick="insert('.')">.</div>
+            <div id="clear">C</div>
+          </div>
+        </div>
+      </div>
+      <div id="result" onclick="calcular()">=</div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
